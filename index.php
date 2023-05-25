@@ -28,8 +28,20 @@ require_once "back-end/app.php";
                 <div id="task-form" class="header">
                     <h3>Add New Student</h3>
                     <div class="form-group mt-4">
+                        <?php
+                        // Display the error message, if set
+                        if (isset($errorMessage)) {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+                            echo $errorMessage;
+                            echo '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+                            echo '<span aria-hidden="true">&times;</span>';
+                            echo '</button>';
+                            echo '</div>';
+                        }
+                        ?>
                         <label for="regno">Registration Number</label>
                         <input type="text" name="regno" class="form-control" id="regno" required>
+
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -67,11 +79,11 @@ require_once "back-end/app.php";
                         echo 'Name: ' . $student['Name'] . PHP_EOL;
                         echo 'Grade: ' . $student['Grade'] . PHP_EOL;
                         echo 'Classroom: ' . $student['Classroom']; ?>
-                        <button type="submit" class="btn btn-primary" name="" value="<?php echo $task['RegNo']; ?>" style="margin-left: 5rem"
-                            class=\"close\">Update
+                        <button type="submit" class="btn btn-primary" name="" value="<?php echo $student['RegNo']; ?>"
+                            style="margin-left: 5rem" class=\"close\">Update
                         </button>
-                        <button type="submit" class="btn btn-danger" name="" value="<?php echo $task['RegNo']; ?>" style="margin-left: 1rem"
-                            class=\"close\">Delete
+                        <button type="submit" class="btn btn-danger" name="" value="<?php echo $student['RegNo']; ?>"
+                            style="margin-left: 1rem" class=\"close\">Delete
                         </button>
                     </li>
                 <?php } ?>
@@ -79,5 +91,12 @@ require_once "back-end/app.php";
         </form>
     </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
 </body>
