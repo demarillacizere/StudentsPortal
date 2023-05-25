@@ -39,7 +39,7 @@ require_once "back-end/app.php";
                         <label for="grade">Grade</label>
                         <input type="number" name="grade" min="0" max="10" class="form-control" id="grade" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="classrooms">Classrooms</label>
                         <select name="classroom" id="classroom" class="form-control">
@@ -49,11 +49,33 @@ require_once "back-end/app.php";
                             <option value="Chemistry">Chemistry</option>
                         </select>
                     </div>
-                    <button type="submit" name="add-student" value="1" class="addBtn btn btn-outline-secondary">Add</button>
-                    
-                    <button type="submit" name="clear-tasks" value="1" class="addBtn btn btn-outline-danger">Clear All</button>
+                    <button type="submit" name="add-student" value="1"
+                        class="addBtn btn btn-outline-secondary">Add</button>
+
+                    <button type="submit" name="clear-tasks" value="1" class="addBtn btn btn-outline-danger">Clear
+                        All</button>
                 </div>
             </div>
+
+            <h3 class="my-4">Current Students</h3>
+
+            <ul id="student-list">
+                <?php foreach ($students as $student) { ?>
+
+                    <li class='my-2'>
+                        <?php echo "Registration number: " . $student['RegNo'] . PHP_EOL;
+                        echo 'Name: ' . $student['Name'] . PHP_EOL;
+                        echo 'Grade: ' . $student['Grade'] . PHP_EOL;
+                        echo 'Classroom: ' . $student['Classroom']; ?>
+                        <button type="submit" class="btn btn-primary" name="" value="<?php echo $task['RegNo']; ?>" style="margin-left: 5rem"
+                            class=\"close\">Update
+                        </button>
+                        <button type="submit" class="btn btn-danger" name="" value="<?php echo $task['RegNo']; ?>" style="margin-left: 1rem"
+                            class=\"close\">Delete
+                        </button>
+                    </li>
+                <?php } ?>
+            </ul>
         </form>
     </div>
 
