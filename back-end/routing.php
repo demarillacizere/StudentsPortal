@@ -30,5 +30,6 @@ if (!empty($_POST)) {
         clearAndWriteTheFileJSON($fileName);
     }
 
+
 }
 $students = readFromFileJSON($fileName);

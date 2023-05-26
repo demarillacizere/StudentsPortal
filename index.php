@@ -40,16 +40,16 @@ require_once "back-end/app.php";
                         }
                         ?>
                         <label for="regno">Registration Number</label>
-                        <input type="text" name="regno" class="form-control" id="regno" required>
+                        <input type="text" name="regno" class="form-control" id="regno">
 
                     </div>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name" class="form-control" id="name" required>
+                        <input type="text" name="name" class="form-control" id="name">
                     </div>
                     <div class="form-group">
                         <label for="grade">Grade</label>
-                        <input type="number" name="grade" min="0" max="10" class="form-control" id="grade" required>
+                        <input type="number" name="grade" min="0" max="10" class="form-control" id="grade">
                     </div>
 
                     <div class="form-group">
@@ -62,10 +62,10 @@ require_once "back-end/app.php";
                         </select>
                     </div>
                     <button type="submit" name="add-student" value="1"
-                        class="addBtn btn btn-outline-secondary">Add</button>
+                        class="addBtn btn btn-outline-primary">Add</button>
 
-                    <button type="submit" name="clear-tasks" value="1" class="addBtn btn btn-outline-danger">Clear
-                        All</button>
+                    <button type="submit" name="clear-students" value="1" class="addBtn btn btn-outline-danger">Clear
+                        All Tasks</button>
                 </div>
             </div>
 
