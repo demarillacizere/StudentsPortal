@@ -27,7 +27,7 @@ function addDataToFileJSON(string $fileName, string $newStudentNo, string $name,
     if (is_writable($fileName)) {
         $students = json_decode(file_get_contents($fileName), true);
         $students[] = ['RegNo' => $newStudentNo, "Name" => $name, "Grade" => $grade, "Classroom" => $classroom];
-        if(!file_put_contents($fileName, json_encode($students))){
+        if (!file_put_contents($fileName, json_encode($students))) {
             echo "Cannot write to the file!";
         }
     }
@@ -42,6 +42,15 @@ function clearAndWriteTheFileJSON(string $fileName): void
 {
     if (is_writable($fileName)) {
         if (!file_put_contents($fileName, json_encode([]))) {
+            echo "Cannot write to the file!";
+        }
+    }
+}
+
+function updateFileJSON(string $fileName, array $students): void
+{
+    if (is_writable($fileName)) {
+        if (!file_put_contents($fileName, json_encode($students))) {
             echo "Cannot write to the file!";
         }
     }
