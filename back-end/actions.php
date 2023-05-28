@@ -8,7 +8,7 @@ function addStudent(string $fileName, string $newStudentNo, string $name, int $g
 
 function removeStudent(string $fileName): void
 {
-    //Remove one particular task
+
     $students = readFromFileJSON($fileName);
     $studentToRemove = $_POST['remove-student'];
     foreach ($students as $key => $student) {
@@ -21,7 +21,7 @@ function removeStudent(string $fileName): void
 
 function updateStudent(string $fileName, string $newregno, string $name, int $grade, string $classroom): void
 {
-    //Mark a task as DONE
+
     $students = readFromFileJSON($fileName);
     $studentToBeUpdated = $_POST['update-student'];
     foreach ($students as $key => $student) {

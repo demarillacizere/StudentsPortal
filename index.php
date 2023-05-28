@@ -70,7 +70,7 @@ require_once "back-end/app.php";
                                             Update
                                         </button>
 
-                                        <form name="task-form" method="post" action="index.php" class="d-inline-block ml-2 pt-2 ">
+                                        <form name="student-form" method="post" action="index.php" class="d-inline-block ml-2 pt-2 ">
                                             <button type="submit" class="btn btn-danger" name="remove-student"
                                                 value="<?php echo $student['RegNo']; ?>">
                                                 Delete
@@ -94,7 +94,7 @@ require_once "back-end/app.php";
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form name="task-form" method="post" action="index.php">
+                                                    <form name="student-form" method="post" action="index.php">
 
                                                         <div class="form-group">
                                                             <label for="name">Registration Number</label>
@@ -145,7 +145,7 @@ require_once "back-end/app.php";
                 <div class='col-sm-6 col-md-4'><button class="btn btn-outline-info" data-toggle="modal"
                         data-target="#addStudentModal">Add New
                         Student</button></div>
-                <form class='col-md-4 col-sm-6 ' name="task-form" method="post" action="index.php">
+                <form class='col-md-4 col-sm-6 ' name="student-form" method="post" action="index.php">
                     <button type="submit" name="clear-students" value="1" class="addBtn btn btn-outline-danger">Clear
                         All
                         Students</button>
@@ -167,7 +167,7 @@ require_once "back-end/app.php";
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form name="task-form" method="post" action="index.php">
+                        <form name="student-form" method="post" action="index.php">
                             <div class="form-group">
                                 <?php
                                 // Display the error message, if set

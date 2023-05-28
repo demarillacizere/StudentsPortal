@@ -1,10 +1,5 @@
 <?php
 
-/**
- * Reads the content from JSON file and returns as an array
- * @param string $fileName
- * @return array - returns array of tasks
- */
 function readFromFileJSON(string $fileName): array
 {
     $students = [];
@@ -16,12 +11,6 @@ function readFromFileJSON(string $fileName): array
     return $students;
 }
 
-/**
- * Adds new item to task list and stores to the json file
- * @param string $fileName
- * @param string $newStudentNo
- * @return void
- */
 function addDataToFileJSON(string $fileName, string $newStudentNo, string $name, int $grade, string $classroom): void
 {
     if (is_writable($fileName)) {
@@ -33,11 +22,6 @@ function addDataToFileJSON(string $fileName, string $newStudentNo, string $name,
     }
 }
 
-/**
- * Deletes completely content from JSON file
- * @param string $fileName
- * @return void
- */
 function clearAndWriteTheFileJSON(string $fileName): void
 {
     if (is_writable($fileName)) {
