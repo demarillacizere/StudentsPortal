@@ -63,14 +63,14 @@ require_once "back-end/app.php";
                                             <?php echo $student['Classroom']; ?>
                                         </p>
                                     </div>
-                                    <div class="col-md-4 text-right">
+                                    <div class="col-sm-4 text-right">
                                         <!-- Update Student Button -->
                                         <button type="button" class="btn btn-info" data-toggle="modal"
                                             data-target="#updateStudentModal<?php echo $student['RegNo']; ?>">
                                             Update
                                         </button>
 
-                                        <form name="task-form" method="post" action="index.php" class="d-inline-block ml-2">
+                                        <form name="task-form" method="post" action="index.php" class="d-inline-block ml-2 pt-2 ">
                                             <button type="submit" class="btn btn-danger" name="remove-student"
                                                 value="<?php echo $student['RegNo']; ?>">
                                                 Delete
@@ -141,14 +141,14 @@ require_once "back-end/app.php";
 
             </div>
 
-            <div class="col-sm-5 row mt-4">
-                <div class='col-sm-4'><button class="btn btn-outline-info" data-toggle="modal"
+            <div class="col-sm-5 row mt-4 gap-1">
+                <div class='col-sm-6 col-md-4'><button class="btn btn-outline-info" data-toggle="modal"
                         data-target="#addStudentModal">Add New
                         Student</button></div>
-                <form class='col-sm-4' name="task-form" method="post" action="index.php">
+                <form class='col-md-4 col-sm-6 ' name="task-form" method="post" action="index.php">
                     <button type="submit" name="clear-students" value="1" class="addBtn btn btn-outline-danger">Clear
                         All
-                        Tasks</button>
+                        Students</button>
                 </form>
             </div>
 
