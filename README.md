@@ -4,13 +4,8 @@ A web application to manage students. Each student should have the following: a 
 
 ## The user is able to:
 
-- Add a new student;
-
-- List the students;
-
-- Update a student;
-
-- Delete a student.
+- Add, List, Update, Delete a student;
+- Add, List, Update, Delete a classroom;
 
 ## Restrictions:
 
